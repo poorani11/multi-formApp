@@ -1,11 +1,11 @@
 // app.js
 // create our angular app and inject ngAnimate and ui-router 
 // =============================================================================
-angular.module('formApp', ['ngAnimate', 'ui.router'])
+var formApp = angular.module('formApp', ['ngAnimate', 'ui.router']);
 
 // configuring our routes 
 // =============================================================================
-.config(function($stateProvider, $urlRouterProvider) {
+formApp.config(function($stateProvider, $urlRouterProvider) {
     
     $stateProvider
     
@@ -43,7 +43,7 @@ angular.module('formApp', ['ngAnimate', 'ui.router'])
 
 // our controller for the form
 // =============================================================================
-.controller('formController', function($scope) {
+formApp.controller('formController', function($scope) {
     
     // we will store all of our form data in this object
     $scope.formData = {};
